@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,6 +81,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             // Use Glide to load the image into the imageViewBackground
             Glide.with(context)
                     .load(imageUrl)
+                    .transform(new RoundedCorners(16)) // Set the corner radius as needed
                     .into(imageViewBackground);
 
             // Set OnClickListener for detailed view or any specific action

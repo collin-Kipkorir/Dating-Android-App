@@ -18,13 +18,14 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DateActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CustomAdapter adapter;
     private List<User> userList = new ArrayList<>(); // Initialize your user list here
-
+  
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class DateActivity extends AppCompatActivity {
         usersRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                List<User> userList = new ArrayList<>();
+                userList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     User user = snapshot.getValue(User.class);
                     if (user != null) {
@@ -47,9 +48,13 @@ public class DateActivity extends AppCompatActivity {
                     }
                 }
 
-                adapter = new CustomAdapter(DateActivity.this, userList); // Pass the context and list of users to your adapter
+                // Shuffle the userList before setting it to the adapter
+                Collections.shuffle(userList);
+
+                adapter = new CustomAdapter(DateActivity.this, userList); // Pass the context and shuffled list of users to your adapter
                 recyclerView.setAdapter(adapter);
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
