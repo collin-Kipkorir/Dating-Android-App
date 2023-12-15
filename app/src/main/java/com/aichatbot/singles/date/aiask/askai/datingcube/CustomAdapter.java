@@ -75,7 +75,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             textViewAge.setText(String.valueOf(user.getAge()));
             textViewDistance.setText(distance);
             // Load the image using Glide
-            String imageUrl = user.getImageUri(); // Assuming this returns a valid Firebase Storage URI
+            String imageUrl = user.getImageUri();
 
             // Use Glide to load the image into the imageViewBackground
             Glide.with(context)
