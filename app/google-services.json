@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "267633011641",
+    "project_id": "dating-cube",
+    "storage_bucket": "dating-cube.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267633011641:android:846d831c6f88f835c02468",
+        "android_client_info": {
+          "package_name": "com.aichatbot.singles.date.aiask.askai.datingcube"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHvxuyLzUEJ2szMf1JvNl3sgDVXjFGkJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
