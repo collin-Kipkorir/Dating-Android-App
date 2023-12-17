@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="greys">#FFFFFFFF</color>
     <color name="grey">#CCCCCC</color>
-    <color name="greyd">#5F5C5C</color>
+    <color name="greyd">#535252</color>
     <color name="white">#FFFFFFFF</color>
     <color name="custom_button">#0DF5DF</color>
 </resources>

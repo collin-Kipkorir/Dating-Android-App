@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,7 +36,7 @@ public class DetailsActivity extends AppCompatActivity {
             String distance = intent.getStringExtra("distance");
             String sexuality = intent.getStringExtra("sexuality");
             String status = intent.getStringExtra("status");
-            String gender = intent.getStringExtra("gender");
+            String gender = intent.getStringExtra("searchGender");
             String location = intent.getStringExtra("location");
           
             // Set retrieved details in respective TextViews
@@ -58,5 +59,10 @@ public class DetailsActivity extends AppCompatActivity {
             }
 
         }
+    }
+
+    public void goBack(View view) {
+        Intent intent = new Intent(this, DateActivity.class);
+        startActivity(intent);
     }
 }
