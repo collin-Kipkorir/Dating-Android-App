@@ -83,7 +83,7 @@
                         android:id="@+id/textViewDistance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Distance"
+                        android:text="Distance away"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
 
