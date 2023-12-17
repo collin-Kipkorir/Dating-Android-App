@@ -1,6 +1,7 @@
 package com.aichatbot.singles.date.aiask.askai.datingcube;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,12 +45,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         User user = userList.get(position);
-        // Generate a random distance between 1 and 10
         int randomDistance = new Random().nextInt(5) + 1;
         String distance = String.valueOf(randomDistance);
         holder.bind(user, distances.get(position).toString());
         holder.bind(user, distance);
+
+       
     }
+
 
     @Override
     public int getItemCount() {
@@ -81,16 +84,27 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             // Use Glide to load the image into the imageViewBackground
             Glide.with(context)
                     .load(imageUrl)
-                    .transform(new RoundedCorners(16)) // Set the corner radius as needed
+                    .transform(new RoundedCorners(16)) 
                     .into(imageViewBackground);
 
-            // Set OnClickListener for detailed view or any specific action
             itemView.setOnClickListener(v -> {
-                // Implement what happens when an item is clicked
-                // For example: Open a detailed activity for this user
-//                Intent intent = new Intent(context, DetailedActivity.class);
-//                intent.putExtra("userId", user.getUserId());
-//                context.startActivity(intent);
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("userId", user.getUserId());
+                // Pass the image URL to DetailsActivity
+                intent.putExtra("imageUrl", user.getImageUri());
+                intent.putExtra("name", user.getName());
+                intent.putExtra("age", user.getAge());
+                intent.putExtra("distance", distance);
+                intent.putExtra("gender", user.getGender());
+                intent.putExtra("location", user.getLocation());
+                intent.putExtra("about", user.getAbout());
+                intent.putExtra("status", user.getStatus());
+                intent.putExtra("bodyType", user.getBodyType());
+                intent.putExtra("sexuality", user.getSexuality());
+                intent.putExtra("searchGender", user.getSearchGender());
+                // Pass all user details here
+
+                context.startActivity(intent);
             });
         }
     }

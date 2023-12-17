@@ -24,7 +24,7 @@ import java.util.List;
 public class DateActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CustomAdapter adapter;
-    private List<User> userList = new ArrayList<>(); // Initialize your user list here
+    private List<User> userList = new ArrayList<>();
   
 
     @Override
