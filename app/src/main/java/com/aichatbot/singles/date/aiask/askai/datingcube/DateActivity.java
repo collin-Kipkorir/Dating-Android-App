@@ -34,6 +34,7 @@ public class DateActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setItemAnimator(new CustomItemAnimator());
 
         DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference().child("users");
         // Retrieve all users
