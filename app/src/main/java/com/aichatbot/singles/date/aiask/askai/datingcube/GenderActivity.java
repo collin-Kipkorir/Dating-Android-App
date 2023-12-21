@@ -57,12 +57,7 @@ public class GenderActivity extends AppCompatActivity {
         });
 
     }
-
-    public void goAge(View view) {
-        Intent intent = new Intent(this, AgeActivity.class);
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        startActivity(intent);
-    }
+    
 
     public void goHome(View view) {
         Intent intent = new Intent(this, MainActivity.class);

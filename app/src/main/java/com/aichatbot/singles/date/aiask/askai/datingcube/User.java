@@ -1,5 +1,10 @@
 package com.aichatbot.singles.date.aiask.askai.datingcube;
 
+import android.os.Message;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private String imageUri;
     private String userId;
@@ -12,6 +17,7 @@ public class User {
     private String bodyType;
     private String sexuality;
     private String searchGender;
+    private List<Message> messages; // List of messages sent by this user
 
     public User() {
         // Default constructor required for Firebase
@@ -29,6 +35,7 @@ public class User {
         this.sexuality = sexuality;
         this.searchGender = searchGender;
         this.imageUri = imageUri;
+        this.messages = new ArrayList<>();
     }
 
     // Getters and setters for all attributes
@@ -118,6 +125,14 @@ public class User {
 
     public void setImageUri(String imageUri) {
         this.imageUri = imageUri;
+    }
+
+    public List<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<Message> messages) {
+        this.messages = messages;
     }
 }
 

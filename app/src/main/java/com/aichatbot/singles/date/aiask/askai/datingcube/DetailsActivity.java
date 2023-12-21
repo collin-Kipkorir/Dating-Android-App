@@ -22,7 +22,6 @@ public class DetailsActivity extends AppCompatActivity {
         TextView ageTextView = findViewById(R.id.ageTextView);
         TextView distanceTextView = findViewById(R.id.textViewDistance);
         ImageView detailImageView = findViewById(R.id.detailImageView);
-
         TextView sexualityTextView = findViewById(R.id.textViewSexuality);
         TextView statusTextView = findViewById(R.id.textViewStatus);
         TextView genderTextView = findViewById(R.id.textViewGender);
@@ -50,15 +49,15 @@ public class DetailsActivity extends AppCompatActivity {
             
             if (intent != null) {
                 // Retrieve other user details...
-                String imageUrl = intent.getStringExtra("imageUrl"); // Retrieve the image URL from intent extras
-
+                String imageUrl = intent.getStringExtra("imageUrl");
                 // Load the image using Glide into the detailImageView
                 Glide.with(this)
-                        .load(imageUrl) // Use the retrieved image URL
+                        .load(imageUrl) 
                         .into(detailImageView);
             }
 
         }
+        
     }
 
     public void goBack(View view) {

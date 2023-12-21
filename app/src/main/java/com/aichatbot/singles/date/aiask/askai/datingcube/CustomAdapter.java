@@ -72,6 +72,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             textViewName = itemView.findViewById(R.id.textViewName);
             textViewAge = itemView.findViewById(R.id.textViewAge);
             textViewDistance = itemView.findViewById(R.id.textViewDistance);
+            
+            
         }
 
         public void bind(User user, String distance) {
@@ -107,6 +109,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                 context.startActivity(intent);
             });
         }
+        
     }
+    
 }
 

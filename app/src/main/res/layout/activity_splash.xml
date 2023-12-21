@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Date Cube"
+            android:text="TUJUANE"
             android:textColor="@android:color/black"
             android:textSize="30sp" />
     </LinearLayout>

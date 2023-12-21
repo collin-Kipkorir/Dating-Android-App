@@ -89,12 +89,7 @@ public class EmailActivity extends AppCompatActivity {
             profileImage.setImageURI(imageUri);
         }
     }
-
-    public void goHome(View view) {
-        Intent intent = new Intent(this, AgeActivity.class);
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        startActivity(intent);
-    }
+    
     public void openDate(View view) {
         // Get user inputs from EditTexts, Spinners, and profile image
         String name = etName.getText().toString().trim();
